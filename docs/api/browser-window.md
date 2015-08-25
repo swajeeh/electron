@@ -147,9 +147,9 @@ window.onbeforeunload = function(e) {
 
   // Unlike usual browsers, in which a string should be returned and the user is
   // prompted to confirm the page unload, Electron gives developers more options.
-  // Returning an empty string or `false` will prevent the unloading.
-  // You can also use the dialog API to let the user confirm closing the app.
-  return false;
+  // Returning empty string or false would prevent the unloading now.
+  // You can also use the dialog API to let the user confirm closing the application.
+  e.returnValue = false;
 };
 ```
 
